@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Material Orders | Modern Chain Link Company</title>
+
+    <link rel="stylesheet" href="css/order.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ======================================
+HEADER
+====================================== -->
+
+<header class="header">
+
+    <div class="company">
+
+        <img src="images/logo.png.png"
+             class="logo">
+
+        <div>
+
+            <h1>Modern Chain Link Company</h1>
+
+            <p>Material Order Management</p>
+
+        </div>
+
+    </div>
+
+    <div>
+
+        <button id="backBtn">
+
+            Dashboard
+
+        </button>
+
+    </div>
+
+</header>
+
+<!-- ======================================
+PAGE TITLE
+====================================== -->
+
+<section class="title-section">
+
+    <h2>Material Orders</h2>
+
+    <p>Add and manage customer material orders.</p>
+
+</section>
+
+<!-- ======================================
+SEARCH
+====================================== -->
+
+<section class="search-section">
+
+    <input
+        type="text"
+        id="searchBox"
+        placeholder="Search Customer / Phone / Order ID">
+
+    <button id="addOrderBtn">
+
+        + Add Order
+
+    </button>
+
+    <button id="exportBtn">
+
+        Export
+
+    </button>
+
+</section>
+
+<!-- ======================================
+ORDER TABLE
+====================================== -->
+
+<section class="table-section">
+
+<div class="table-container">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Order ID</th>
+
+<th>Customer</th>
+
+<th>Phone</th>
+
+<th>Type</th>
+
+<th>Brand</th>
+
+<th>Height</th>
+
+<th>Length</th>
+
+<th>Status</th>
+
+<th>Total</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="orderTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+<!-- ======================================
+ADD / EDIT POPUP
+====================================== -->
+
+<div class="popup" id="popup">
+
+<div class="popup-content">
+
+<h2 id="popupTitle">
+
+Add Material Order
+
+</h2>
+
+<form id="orderForm">
+
+<div class="grid">
+
+<div>
+
+<label>Customer Name</label>
+
+<input
+type="text"
+id="customerName"
+required>
+
+</div>
+
+<div>
+
+<label>Customer Number</label>
+
+<input
+type="text"
+id="customerNumber"
+required>
+
+</div>
+
+<div>
+
+<label>Order Type</label>
+
+<select id="type">
+
+<option>Fence</option>
+
+<option>Barbed Wire</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>Diamond Size</label>
+
+<input
+type="text"
+id="diamondSize">
+
+</div>
+
+<div>
+
+<label>Brand</label>
+
+<select id="brand">
+
+<option>TATA</option>
+
+<option>Micon</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>Height (ft)</label>
+
+<input
+type="number"
+id="height">
+
+</div>
+
+<div>
+
+<label>Length (ft)</label>
+
+<input
+type="number"
+id="length">
+
+</div>
+
+<div>
+
+<label>Order Date</label>
+
+<input
+type="date"
+id="orderDate">
+
+</div>
+
+<div>
+
+<label>Delivery Date</label>
+
+<input
+type="date"
+id="deliveryDate">
+
+</div>
+
+<div>
+
+<label>Sq.ft Price (₹)</label>
+
+<input
+type="number"
+id="sqftPrice">
+
+</div>
+
+<div>
+
+<label>Barbed Wire (kg)</label>
+
+<input
+type="number"
+id="barbedWire">
+
+</div>
+
+<div>
+
+<label>Binding Wire (kg)</label>
+
+<input
+type="number"
+id="bindingWire">
+
+</div>
+
+<div>
+
+<label>Advance Paid (₹)</label>
+
+<input
+type="number"
+id="advancePaid">
+
+</div>
+
+<div>
+
+<label>Amount Paid (₹)</label>
+
+<input
+type="number"
+id="amountPaid">
+
+</div>
+
+<div>
+
+<label>Total Amount (₹)</label>
+
+<input
+type="number"
+id="totalAmount"
+readonly>
+
+</div>
+
+<div>
+
+<label>Balance (₹)</label>
+
+<input
+type="number"
+id="balance"
+readonly>
+
+</div>
+
+<div>
+
+<label>Status</label>
+
+<select id="status">
+
+<option>Pending</option>
+
+<option>Processing</option>
+
+<option>Completed</option>
+
+<option>Delivered</option>
+
+<option>Cancelled</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="buttons">
+
+<button
+type="submit">
+
+Save
+
+</button>
+
+<button
+type="button"
+id="cancelBtn">
+
+Cancel
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+<script src="js/material.js"></script>
+
+</body>
+
+</html>

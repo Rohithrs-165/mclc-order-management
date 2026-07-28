@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.db
+*.sqlite3
+
+# Node / Android build
+node_modules/
+.gradle/
+build/
+app/build/
+*.apk
+*.log
+.DS_Store

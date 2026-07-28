@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Modern Chain Link Company</title>
+
+    <link rel="stylesheet"
+          href="css/dashboard.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<!--==========================
+HEADER
+===========================-->
+
+<header class="header">
+
+    <div class="company">
+
+        <img src="images/logo.png.png"
+             class="logo">
+
+        <div>
+
+            <h1>Modern Chain Link Company</h1>
+
+            <p>Order Management System</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="header-right">
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </div>
+
+</header>
+
+
+<!--==========================
+NAVIGATION
+===========================-->
+
+<nav class="navigation">
+
+    <button
+        onclick="location.href='material.html'">
+
+        📦 Material Orders
+
+    </button>
+
+    <button
+        onclick="location.href='installation.html'">
+
+        🏗 Material + Installation
+
+    </button>
+
+</nav>
+
+
+<!--==========================
+WELCOME
+===========================-->
+
+<section class="welcome">
+
+    <h2>
+
+        Welcome,
+
+        <span id="adminName">
+
+            Santhoshkumar
+
+        </span>
+
+    </h2>
+
+    <p>
+
+        Manage all customer orders from one place.
+
+    </p>
+
+</section>
+
+
+<!--==========================
+STATISTICS
+===========================-->
+
+<section class="cards">
+
+    <div class="card">
+
+        <h3>Total Orders</h3>
+
+        <h1 id="totalOrders">
+
+            0
+
+        </h1>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Pending</h3>
+
+        <h1 id="pendingOrders">
+
+            0
+
+        </h1>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Processing</h3>
+
+        <h1 id="processingOrders">
+
+            0
+
+        </h1>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Delivered</h3>
+
+        <h1 id="deliveredOrders">
+
+            0
+
+        </h1>
+
+    </div>
+
+</section>
+
+
+<!--==========================
+QUICK ACTIONS
+===========================-->
+
+<section class="actions">
+
+    <h2>
+
+        Quick Actions
+
+    </h2>
+
+    <div class="action-buttons">
+
+        <button
+            onclick="location.href='material.html'">
+
+            ➕ New Material Order
+
+        </button>
+
+        <button
+            onclick="location.href='installation.html'">
+
+            🏗 New Installation Order
+
+        </button>
+
+        <button
+            id="exportExcel">
+
+            📥 Export Excel
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!--==========================
+SEARCH
+===========================-->
+
+<section class="search-section">
+
+    <input
+        type="text"
+        id="searchBox"
+        placeholder="Search Customer / Phone / Order ID">
+
+</section>
+
+
+<!--==========================
+DATE FILTER
+===========================-->
+
+<section class="date-filter">
+
+    <div>
+
+        <label>
+
+            From Date
+
+        </label>
+
+        <input
+            type="date"
+            id="fromDate">
+
+    </div>
+
+
+    <div>
+
+        <label>
+
+            To Date
+
+        </label>
+
+        <input
+            type="date"
+            id="toDate">
+
+    </div>
+
+
+    <button
+        id="filterBtn">
+
+        Filter
+
+    </button>
+
+</section>
+
+
+<!--==========================
+RECENT ORDERS
+===========================-->
+
+<section class="recent-orders">
+
+    <h2>
+
+        Recent Orders
+
+    </h2>
+
+    <table>
+
+        <thead>
+
+        <tr>
+
+            <th>Order ID</th>
+
+            <th>Customer</th>
+
+            <th>Phone</th>
+
+            <th>Type</th>
+
+            <th>Status</th>
+
+            <th>Total</th>
+
+        </tr>
+
+        </thead>
+
+        <tbody id="recentOrders">
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

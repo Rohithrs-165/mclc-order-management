@@ -1,0 +1,403 @@
+/* ==========================================
+   Modern Chain Link Company
+   Login Page
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background:linear-gradient(135deg,#EC4899,#16A34A);
+
+    position:relative;
+
+}
+
+/* ==========================================
+   BACKGROUND
+========================================== */
+
+.background{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    overflow:hidden;
+
+}
+
+/* Floating Circles */
+
+.circle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    opacity:.18;
+
+    animation:float 8s infinite ease-in-out;
+
+}
+
+.circle1{
+
+    width:300px;
+
+    height:300px;
+
+    background:white;
+
+    top:-80px;
+
+    left:-80px;
+
+}
+
+.circle2{
+
+    width:250px;
+
+    height:250px;
+
+    background:#ffffff;
+
+    bottom:-60px;
+
+    right:-60px;
+
+    animation-delay:2s;
+
+}
+
+.circle3{
+
+    width:180px;
+
+    height:180px;
+
+    background:#ffffff;
+
+    top:45%;
+
+    right:10%;
+
+    animation-delay:4s;
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-20px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+/* ==========================================
+   LOGIN CARD
+========================================== */
+
+.login-card{
+
+    width:430px;
+
+    max-width:90%;
+
+    padding:40px;
+
+    background:rgba(255,255,255,.20);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,255,255,.3);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+    text-align:center;
+
+    animation:cardAnimation .8s;
+
+}
+
+@keyframes cardAnimation{
+
+    from{
+
+        transform:translateY(40px);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo img{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    background:white;
+
+    padding:6px;
+
+    object-fit:contain;
+
+    box-shadow:0 0 20px rgba(255,255,255,.35);
+
+}
+
+/* ==========================================
+   COMPANY NAME
+========================================== */
+
+.company{
+
+    margin-top:18px;
+
+}
+
+.company h1{
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.company p{
+
+    color:white;
+
+    margin-top:8px;
+
+    font-size:15px;
+
+}
+
+/* ==========================================
+   FORM
+========================================== */
+
+form{
+
+    margin-top:30px;
+
+    text-align:left;
+
+}
+
+form h2{
+
+    color:white;
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+.input-box{
+
+    margin-bottom:18px;
+
+}
+
+.input-box label{
+
+    display:block;
+
+    color:white;
+
+    margin-bottom:8px;
+
+    font-weight:500;
+
+}
+
+.input-box input{
+
+    width:100%;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    border:2px solid transparent;
+
+    outline:none;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.input-box input:focus{
+
+    border:2px solid #EC4899;
+
+    box-shadow:0 0 15px rgba(236,72,153,.4);
+
+}
+
+/* ==========================================
+   ERROR
+========================================== */
+
+#errorMessage{
+
+    min-height:22px;
+
+    text-align:center;
+
+    color:#fff;
+
+    font-size:14px;
+
+    margin-bottom:15px;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.login-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#16A34A;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.login-btn:hover{
+
+    background:#15803D;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(22,163,74,.35);
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer{
+
+    margin-top:25px;
+
+    color:white;
+
+    font-size:13px;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:500px){
+
+    .login-card{
+
+        padding:30px 22px;
+
+    }
+
+    .company h1{
+
+        font-size:22px;
+
+    }
+
+    form h2{
+
+        font-size:20px;
+
+    }
+
+    .logo img{
+
+        width:75px;
+
+        height:75px;
+
+    }
+
+}
